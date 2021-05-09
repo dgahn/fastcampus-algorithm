@@ -1,7 +1,6 @@
 # FastCampus Algorithm 문제풀이
 
-이 저장소는 FastCampus의 알고리즘 문제풀이 강의의 문제 풀이 저장소다.
-
+이 저장소는 FastCampus의 [알고리즘 문제풀이 강의](https://fastcampus.co.kr/dev_online_codingtest) 의 문제 풀이 저장소다.
 
 ### 자료구조란?
 
