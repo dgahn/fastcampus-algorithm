@@ -101,6 +101,44 @@ class Tree(
                     currentParentNode?.right = currentNode.right
                     currentNode = null
                 }
+            } else {
+                if(data < currentParentNode?.value!!) {
+                    var changeNode = currentNode.right
+                    var changeParentNode = currentNode.right
+                    while (changeNode?.left != null) {
+                        changeParentNode = changeNode
+                        changeNode = changeNode.left
+                    }
+
+                    if(changeNode?.right != null) {
+                        changeParentNode?.left = changeNode.right
+                    } else {
+                        changeParentNode?.left = null
+                    }
+
+                    currentParentNode.left = changeNode
+                    changeNode?.right = currentNode.right
+                    changeNode?.left = currentNode.left
+                    currentNode = null
+                } else {
+                    var changeNode = currentNode.right
+                    var changeParentNode = currentNode.right
+                    while (changeNode?.left != null) {
+                        changeParentNode = changeNode
+                        changeNode = changeNode.left
+                    }
+
+                    if(changeNode?.right != null) {
+                        changeParentNode?.left = changeNode.right
+                    } else {
+                        changeParentNode?.left = null
+                    }
+
+                    currentParentNode.right = changeNode
+                    changeNode?.right = currentNode.right
+                    changeNode?.left = currentNode.left
+                    currentNode = null
+                }
             }
         }
     }
